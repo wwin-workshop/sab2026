@@ -331,11 +331,16 @@ h2 {
 .person-card {
   padding: 24px;
   box-shadow: 0 14px 34px rgba(38, 35, 28, 0.09);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 .person-card.compact { min-height: 120px; }
+.person-card.compact .avatar { width: 160px; height: 160px; margin-bottom: 16px; }
 .avatar {
-  width: 76px;
-  height: 76px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--sage), #fff, rgba(214,156,75,.5));
   border: 1px solid var(--line);
@@ -343,7 +348,15 @@ h2 {
   place-items: center;
   font-weight: 900;
   color: var(--accent-dark);
-  margin-bottom: 18px;
+  margin-bottom: 25px;
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: inherit; /* 親の角丸を引き継ぐ */
+  display: block;
 }
 .role {
   color: var(--moss) !important;
@@ -351,6 +364,15 @@ h2 {
 }
 .submission-block { align-items: center; }
 .notice-card { padding: 28px; }
+.submission-cta {
+  display: flex;
+  width: fit-content;
+  margin: 4px auto 24px;
+  background: rgba(214, 156, 75, 0.22);
+  color: var(--accent-dark);
+  border-color: rgba(214, 156, 75, 0.55);
+}
+.submission-cta:hover { background: rgba(214, 156, 75, 0.34); }
 .clean-list {
   padding: 0;
   margin: 18px 0;
