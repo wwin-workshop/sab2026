@@ -363,6 +363,16 @@ h2 {
   font-weight: 800;
 }
 .submission-block { align-items: center; }
+.registration-note {
+  margin: 20px 0 0;
+  padding: 12px 16px;
+  border-left: 3px solid var(--gold);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 253, 248, 0.6);
+  color: var(--ink-soft);
+  font-size: .95rem;
+}
+.registration-note a { color: var(--accent-dark); font-weight: 800; }
 .notice-card { padding: 28px; }
 .submission-cta {
   display: flex;
